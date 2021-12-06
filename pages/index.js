@@ -9,7 +9,7 @@ import Notification from "../components/UI/Notification"
 
 let isInitial = true
 
-function index() {
+function Index() {
   const dispatch = useDispatch()
 
   const showCart = useSelector(state => state.ui.cartIsVisisble)
@@ -71,4 +71,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;
