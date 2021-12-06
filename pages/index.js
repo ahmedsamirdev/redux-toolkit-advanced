@@ -16,7 +16,6 @@ function Index() {
   const cart = useSelector(state => state.cart)
   const notification = useSelector(state => state.ui.notification)
 
-  const FIREBASE_URL = process.env.local
   useEffect(() => {
     const sendCartData = async () => {
       dispatch(uiActions.showNotification({
@@ -24,7 +23,7 @@ function Index() {
         title: 'sending..',
         message: 'Sending cart data.'
       }))
-      const response = await fetch(`https://redux-advanced-${FIREBASE_URL}.firebaseio.com/cart.json`, {
+      const response = await fetch(`https://redux-advanced-51d0a-default-rtdb.firebaseio.com/cart.json`, {
         method: 'PUT',
         body: JSON.stringify(cart)
       })
